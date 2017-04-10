@@ -1,0 +1,10 @@
+<h1>作品ページを編集する</h1>
+<%= form_tag update_game_path(@game.id), method: "patch" do %>
+  作品名
+  <%= text_field_tag :title, @game.title, class: "form-control title-field" %>
+  作品No.
+  <%=text_field_tag :number, @game.number, class:"form-control title-field"%>
+  ゲーム説明
+  <%= text_area_tag :rules, @game.rules, class: "form-control content-field" %>
+  <%= submit_tag "保存", class: "btn primary-btn" %>
+<% end %>

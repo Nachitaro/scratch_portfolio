@@ -1,0 +1,10 @@
+<h1>作品投稿</h1>
+<%=form_tag games_path do%>
+ 作品名
+ <input type='text' name="title" class="form-control title-field">
+ 作品No.
+ <input type='text' name="number" class="form-control title-field">
+ ゲーム説明
+ <textarea name="rules" class="form-control content-field"></textarea>
+ <input type="submit" value="作品を追加する" class="btn primary-btn">
+<%end%>

@@ -1,0 +1,9 @@
+<h2>作品名</h2>
+<p><%= @game.title %></p>
+<%@url='//scratch.mit.edu/projects/embed/'+@game.number+'/'%>
+<iframe allowtransparency="true" width="485" height="402" src="<%=@url%>" frameborder="0" allowfullscreen></iframe>
+
+<h2>ゲーム説明</h2>
+<p><%= simple_format(h @game.rules) %></p>
+<%= link_to "編集", edit_game_path(@game.id), class: "btn edit-btn" %>
+<%= link_to "削除", destroy_game_path(@game.id), method: "delete", class: "btn destroy-btn", "data-confirm" => "本当に削除しますか？" %>

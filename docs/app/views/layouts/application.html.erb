@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ScratchPortfolio</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div id="logo">Scratch Portfolio</div>
+        <ul class="header-right">
+          <li><%=link_to 'Top',root_path%></li>
+          <li><%=link_to 'About',about_path%></li>
+          <li><%=link_to 'New',games_new_path%></li>
+          <li><%=link_to 'Index',games_path%></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container">
+    <%= yield %>
+    </div>
+
+
+  <div class="container">
+  <footer class="footer">
+    <div class="small">
+      <li><%=link_to 'Nachitaro on Scratch','https://scratch.mit.edu/users/Nachitaro/'%></li>
+      &copy; 2017 Nachitaro
+    </div>
+  </footer>
+  </div>
+  </body>
+</html>

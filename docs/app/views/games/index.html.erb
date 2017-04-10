@@ -1,0 +1,11 @@
+<h1>作品一覧</h1>
+<ul class="notes">
+  <% @games.each do |game| %>
+    <li>
+      <p>作品名</p>
+      <span class="content">
+        <%=link_to game.title,game_path(game.id)%>
+      </span>
+    </li>
+  <% end %>
+</ul>
